@@ -19,6 +19,7 @@ The syntax of the drawdown language is preatty simple with main goal to be as hu
 All drawdon diagrams are parsed form markdown `code block` and need to hav header in the format `drawdown.<diagram-type>.<diagram-identifier`
 
 Example
+
     ```drawdown.flow.particle-trap
       ...
       ...
@@ -32,6 +33,7 @@ Currently flow diagrams consist of two different type of blocks you can use:
 
 #### Process block
 To add process block just type
+
 ```
 - Catch the particle.
 ```
@@ -120,7 +122,7 @@ Arrow  | Source Head | Target Head |     Line type
 
 You can have arrow labels by placing a text between the arrow's token style symbols:
 
-    ```drawdown.graph.entanglement
+    ```drawdown.graph.quantum-teleportation
     Alice ~~ Alice
     Alice ~loves~> Bob
     Bob ~knows~> Alice
