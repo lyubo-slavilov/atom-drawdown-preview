@@ -1,0 +1,130 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+@import "variables";
+// @import 'markdown-elementss'
+@is-dark: boolean(1 >2);
+
+.drawdown-preview-toggler {
+  position: absolute;
+  top: 5px;
+  right: 30px;
+  z-index: 1;
+}
+.drawdown-view {
+
+
+
+
+
+  overflow: auto;
+  background-color: @tab-background-color-active;
+  padding: @component-padding;
+  font-size: 1.2em;
+
+
+
+  &.rendered {
+    display: flex;
+    flex-direction: column;
+  }
+  .message {
+    &.error {
+      background: lighten(@background-color-error, 5%);
+      color: lighten(@text-color-error, 20%);
+    }
+    &.float {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      box-sizing: border-box;
+      opacity: 0.2;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    h1 {
+      font-size: 1em;
+      background: @background-color-error;
+      padding: @component-padding;
+      margin-bottom: 0;
+    }
+    .details {
+      padding: 2*@component-padding;
+      overflow: auto;
+      white-space: pre;
+
+    }
+  }
+
+
+
+  header,
+  footer {
+    height: @component-line-height;
+    line-height: @component-line-height;
+  }
+  section {
+    background: @tool-panel-background-color;
+    flex: 1;
+    overflow: hidden;
+  }
+  .dd-diagram-container {
+    position: relative;
+    display: inline-block;
+
+    .dd-save-as-image {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+    }
+  }
+  svg.dd-diagram {
+    background: @tool-panel-background-color;
+
+    &.focused {
+      outline: 1px solid @fg;
+    }
+    .dd-block {
+      path {
+        fill: @tab-background-color-active;
+        stroke: @tool-panel-border-color;
+        stroke-width: 1;
+      }
+      text {
+        fill: @text-color;
+      }
+    }
+    .dd-link {
+      stroke: @line-color;
+      fill: none;
+      .dd-link-head {
+        fill: @line-color;
+      }
+      .dd-link-label {
+        stroke: none;
+        fill: @text-color
+      }
+    }
+
+    &.paper {
+      background: white;
+      .dd-block {
+        path {
+          fill: whitesmoke;
+          stroke: black;
+        }
+        text {
+          fill: black;
+        }
+      }
+      .dd-link {
+        stroke: black;
+        .dd-link-head {fill: black}
+        .dd-link-label {fill: black}
+      }
+    }
+  }
+}

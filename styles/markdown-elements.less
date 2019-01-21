@@ -1,0 +1,30 @@
+@import "variables";
+
+.drawdown-view {
+  pre {
+    font-size: .9em;
+    color: lighten(@fg, 20%);
+  }
+  code {
+    color: lighten(@fg, 20%);
+  }
+  h1, h2, h3, h4 {
+    font-weight: 400;
+    color: @fg-heading-color
+  }
+  h1 {font-size: 2em;}
+  h2 {font-size: 1.8em;}
+  h3 {font-size: 1.6em;}
+  h4 {font-size: 1.4em;}
+
+  table {
+    margin: 1.5em 0;
+    th {
+      color: @fg-heading-color;
+    }
+    th, td {
+      padding: 0.6em 1em;
+      border: 1px solid @line-color;
+    }
+  }
+}
