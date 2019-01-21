@@ -101,8 +101,8 @@ Example
 
 There are several things we should know:
 1. The actual indentation size is not important as long as it is consistent over the branch
-2. Tokens of type `CASE` can have any label you want: `- Yes:`, `- No:`, `- Negative:`, `- Positive:`, etc
-3. You can branch as many branches as you want, but arrows will start look awkward.
+2. Tokens of type `CASE` can have any label we want: `- Yes:`, `- No:`, `- Negative:`, `- Positive:`, etc
+3. We can branch as many branches as we want, but arrows will start look awkward.
 
 ### Graph diagrams
 
@@ -124,7 +124,7 @@ This will produce something like
 
 #### Arrows
 
-You can have several types of arrows
+We have several types of arrows which we can use
 
 Arrow  | Source Head | Target Head |     Line type
 :-----:|:-----------:|:-----------:|:----------------:
@@ -137,7 +137,7 @@ Arrow  | Source Head | Target Head |     Line type
 `<~~`  |     yes     |     no      | Curved line
 `<~~>` |     yes     |     yes     | Curved line
 
-You can have arrow labels by placing a text between the arrow's token style symbols:
+We can have arrow labels by placing a text between the arrow's token style symbols:
 
     ```drawdown.graph.quantum-teleportation
     Alice ~~ Alice
