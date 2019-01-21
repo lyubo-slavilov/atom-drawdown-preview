@@ -13,10 +13,10 @@ Plugin relies on the [drawdown parser][b7941411] and [drawdown renderer][4619e37
 
 ## Drawdown syntaxis
 
-The syntax of the drawdown language is preatty simple with main goal to be as human readable as possible.
+The syntax of the drawdown language is pretty simple and its main goal is to be as human readable as possible.
 
 ### Header
-All drawdon diagrams are parsed form markdown `code block` and need to hav header in the format `drawdown.<diagram-type>.<diagram-identifier`
+All drawdon diagrams are parsed form markdown `code block` and need to have header in the format `drawdown.<diagram-type>.<diagram-identifier`
 
 Example
 
@@ -26,25 +26,27 @@ Example
 
     ```
 
-In the example above we will have a flow diagram called `particle-trap`.
+In the example above we declared **flow** diagram called `particle-trap`.
 
 ### Flow diagrams
 Currently flow diagrams consist of two different type of blocks you can use:
 
 #### Process block
-To add process block just type
+
+Process blocks are represented by simple rectangular shape and we can declare them by typing:
 
 ```
 - Catch the particle.
 ```
 
 #### Conditional block
-To add conditional block just type
+Conditional blocks are represented by a diamond shape and we can declare them by typing:
+
 ```
 - Particle is positive?
 ```
 
-You will notice all blocks starts with `-` token and ends either with full stop `.` or question mark `?` followed by new line.
+You will notice all blocks start with `-` token and end either with full stop `.` or question mark `?` followed by new line.
 
 Example
 
@@ -58,13 +60,28 @@ This will prodice the following diagram:
 
 ![Diagram 01](assets/diagram01.png)
 
-#### Branching the flow
-In order to branch several flow paths (e.g. arrows) from a block all you have to use the `condition` label
+#### Arrow labeling
+We can label an arrow by using a special token called `CASE` token. Its syntax is as follows `- <label>:`
+
+Example
 
 ```
 - Yes:
 ```
-After that indent the blocks in the branch
+
+#### Branching the flow
+
+In order to branch several flow paths (arrows) from a block all we have to do is to use an arrow label (a CASE token) and indentation for the consequential blocks:
+
+```
+- Yes:
+  - Branched block.
+- No:
+  - Another Branched block.
+- Maybe:
+  - Third branch.
+  - The third branch follows.
+```
 
 Example
 
@@ -82,9 +99,9 @@ Example
     ```
 ![Diagram 02](assets/diagram02.png)
 
-There are several things to emphasis:
-1. The actual indentation size is not important until it is consistent over the branch
-2. Tokens of type `condition` can have any label you want: `- Yes:`, `- No:`, `- Negative:`, `- Positive:`, etc
+There are several things we should know:
+1. The actual indentation size is not important as long as it is consistent over the branch
+2. Tokens of type `CASE` can have any label you want: `- Yes:`, `- No:`, `- Negative:`, `- Positive:`, etc
 3. You can branch as many branches as you want, but arrows will start look awkward.
 
 ### Graph diagrams
