@@ -1,7 +1,7 @@
 {
   "name": "drawdown-preview",
   "main": "./lib/drawdown-preview",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A short description of your package",
   "keywords": [
     "markdown",
@@ -21,6 +21,5 @@
     "drawdown-parser": "^1.2.0",
     "drawdown-svg-render": "^1.4.0",
     "markdown-it": "^8.4.2"
-
   }
 }
