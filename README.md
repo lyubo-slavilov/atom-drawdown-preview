@@ -16,7 +16,7 @@ Plugin relies on the [drawdown parser][b7941411] and [drawdown renderer][4619e37
 The syntax of the drawdown language is pretty simple and its main goal is to be as human readable as possible.
 
 ### Header
-All drawdon diagrams are parsed form markdown `code block` and need to have header in the format `drawdown.<diagram-type>.<diagram-identifier`
+All drawdon diagrams are parsed form markdown `code block` and need to have a header in the format `drawdown.<diagram-type>.<diagram-identifier`
 
 Example
 
@@ -33,7 +33,7 @@ Currently flow diagrams consist of two different type of blocks you can use:
 
 #### Process block
 
-Process blocks are represented by simple rectangular shape and we can declare them by typing:
+Process blocks are represented by a simple rectangular shape and we can declare them by typing:
 
 ```
 - Catch the particle.
@@ -100,9 +100,9 @@ Example
 ![Diagram 02](assets/diagram02.png)
 
 There are several things we should know:
-1. The actual indentation size is not important as long as it is consistent over the branch
-2. Tokens of type `CASE` can have any label we want: `- Yes:`, `- No:`, `- Negative:`, `- Positive:`, etc
-3. We can branch as many branches as we want, but arrows will start look awkward.
+1. The actual indentation size is not important as long as it is consistent over the branch.
+2. Tokens of type `CASE` can have any label we want: `- Yes:`, `- No:`, `- Negative:`, `- Positive:`, etc.
+3. We can branch as many branches as we want, but arrows will start to look awkward.
 
 ### Graph diagrams
 
